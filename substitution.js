@@ -30,12 +30,11 @@ plugin.onMessageReceived = function (event) {
         search = new(RegExp)(event.substitute.match, event.substitute.options);
     } else { search = event.substitute.match }
 
-    for (var i = 0; i < messages.length; i++) {
-      messages[i].innerHTML = messages[i].innerHTML
-        .replace(search, "<span style='text-decoration: line-through'>" +
-                         event.substitute.match + "</span> " +
-                         event.substitute.replace);
-    }
+    //using jQuery replace
+    messages.replace(search, "<span style='text-decoration: line-through;'>" +
+                              event.substitute.match + "</span> " +
+                              event.substitute.replace);
+
     return false;
   }
 };
