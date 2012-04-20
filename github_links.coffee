@@ -102,9 +102,8 @@ if jQuery?
             color: #000;
             cursor: pointer;
             display: inline-block;
-            padding: 3px;
             text-align: center;
-            padding: 5px;
+            padding: 1px 5px;
             text-decoration: none !important;
             }
             .gh-button:hover {
@@ -135,7 +134,7 @@ if jQuery?
             border-radius: 3px;
             color: white;
             font-family: monospace;
-            padding: 2px 1px 1px;
+            padding: 1px 4px;
             text-decoration: none;
             text-shadow: 1px 1px 0 #000;
           }
