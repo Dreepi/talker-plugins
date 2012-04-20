@@ -105,6 +105,7 @@ if jQuery?
             text-align: center;
             padding: 1px 5px;
             text-decoration: none !important;
+            font-size: 12px;
             }
             .gh-button:hover {
               -moz-box-shadow:  0 0 5px rgba(7, 94, 131, 0.4);
