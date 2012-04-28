@@ -10,10 +10,10 @@ githubIcon = '<span class="gh-icon"></span>'
 
 generateGithubLink = (url) ->
   base = url.replace(/^\w+:\/\//, '')
-  "<a href=\"#{url}\" class=\"gh-link\">#{githubIcon} #{base}</a>"
+  "<a href=\"#{url}\" class=\"gh-link\" target=\"_blank\">#{githubIcon} #{base}</a>"
 
 generateGithubButton = (url, text) ->
-  "<a href=\"#{url}\" class=\"gh-button\">#{githubIcon} #{text}</a>"
+  "<a href=\"#{url}\" class=\"gh-button\" target=\"_blank\">#{githubIcon} #{text}</a>"
 
 githubRef = (ref) ->
   "<span class=\"gh-ref\">#{ref}</span>"
