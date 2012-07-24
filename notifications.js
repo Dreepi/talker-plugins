@@ -6,7 +6,15 @@ var getAvatar = function(user){
 
 var currentUserRegexp = new RegExp("\\b"+Talker.currentUser.name+"\\b",'gi');
 
+
 plugin.onLoaded = function() {
+
+  if (window.webkitNotifications.checkPermission() != 0) { // allowed
+    $("#msgbox").keydown(function(){
+      window.webkitNotifications.requestPermission();
+    });
+  }
+
   plugin.onBlur = function() {
     plugin.onMessageReceived = function(event) {
       if (window.webkitNotifications.checkPermission() == 0) { // allowed
@@ -18,8 +26,6 @@ plugin.onLoaded = function() {
             setTimeout(function(){n.cancel()}, 5000);
           };
         }
-      } else {
-        window.webkitNotifications.requestPermission();
       }
     };
   };
