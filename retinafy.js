@@ -6,8 +6,9 @@ function retinafy(event){
     $this.attr('src', src.replace(/\?s=18$/, '?s=36'));
   });
 }
-
-plugin.onLoaded = retinafy;
-plugin.onUsers = retinafy;
-plugin.onJoin = retinafy;
-plugin.onMessageInsertion = retinafy;
+if( window.devicePixelRatio && window.devicePixelRatio > 1 ){
+  plugin.onLoaded = retinafy;
+  plugin.onUsers = retinafy;
+  plugin.onJoin = retinafy;
+  plugin.onMessageInsertion = retinafy;
+}
