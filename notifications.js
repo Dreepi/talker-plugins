@@ -1,7 +1,7 @@
 if (!window.webkitNotifications) return;
 
 var getAvatar = function(user){
-  return "http://assets0.talkerapp.com/avatar/" + MD5(user.email) + ".jpg?s=48";
+  return "https://assets0.talkerapp.com/avatar/" + MD5(user.email) + ".jpg?s=48";
 };
 
 var currentUserRegexp = new RegExp("\\b"+Talker.currentUser.name+"\\b",'gi');
