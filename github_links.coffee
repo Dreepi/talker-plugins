@@ -68,6 +68,7 @@ if jQuery?
         <style type="text/css">
           .gh-icon {
             background: url("https://github.com/favicon.ico");
+            background-size: 16px;
             display: inline-block;
             height: 16px;
             vertical-align: middle;
